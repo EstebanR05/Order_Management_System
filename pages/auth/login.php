@@ -36,7 +36,7 @@
       if ($var_resultado->num_rows > 0) {
         // Usuario autenticado
         echo "Usuario Autenticado Bienvenido $user";
-        header('Location: /sap/pages/Astroservice.php');
+        header('Location: /Order_Management_System/pages/Astroservice.php');
         exit();
       } else {
         // Usuario no autenticado

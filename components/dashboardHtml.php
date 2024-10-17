@@ -7,7 +7,7 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Utilice el título si está en la página frontal -->
-  <title>SAP</title>
+  <title>Sistema Administracion de Pedidos</title>
   <meta name="description" content="XAMPP is an easy to install Apache distribution containing MariaDB, PHP and Perl." />
   <meta name="keywords" content="xampp, apache, php, perl, mariadb, open source distribution" />
   <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
           <li class="item "><a href="/dashboard/howto.html">Hardware</a></li>
           <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">Redes</a></li>
           <li class="item "><a href="/phpmyadmin/">Sobre nosotros</a></li>
-          <li class="item "><a href="/sap/pages/user/usuarios.php">ver clientes</a></li>
+          <li class="item "><a href="/Order_Management_System/pages/user/usuarios.php">ver clientes</a></li>
         </ul>
       </section>
     </nav>
