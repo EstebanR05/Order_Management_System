@@ -639,6 +639,6 @@
                 </div>
 
                 <div class="user">
-                    <img src="/Order_Management_System/assets/imgs/customer01.png" alt="">
+                    <img src="/Order_Management_System/assets/imgs/customer01.jpg" alt="">
                 </div>
             </div>
