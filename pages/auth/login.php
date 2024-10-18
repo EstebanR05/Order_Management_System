@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($var_resultado->num_rows > 0) {
         // Usuario autenticado
         echo "Usuario Autenticado Bienvenido $user";
-        header('Location: /Order_Management_System/pages/Astroservice.php');
+        header('Location: /Order_Management_System/pages/dashboard.php');
         exit();
     } else {
         // Usuario no autenticado

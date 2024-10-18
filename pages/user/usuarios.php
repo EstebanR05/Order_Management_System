@@ -1,6 +1,6 @@
 <?php require_once('../../components/dashboardHtml.php'); ?>
 
-<div class="row">
+<div class="details">
   <div class="large-12 columns">
     <h4>Consultar por Id Cliente</h4>
     <html>
