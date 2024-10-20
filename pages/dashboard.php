@@ -48,7 +48,7 @@
 </div>
 
 <!-- ================ Order Details List ================= -->
-<div class="details">
+<div class="details" style="grid-template-columns: 2fr 1fr;">
   <div class="recentOrders">
     <div class="cardHeader">
       <h2>Recent Orders</h2>
