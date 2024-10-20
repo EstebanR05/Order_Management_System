@@ -1,10 +1,12 @@
-<?php require_once('../../components/dashboardHtml.php'); ?>
+<?php
+ob_start();
+require_once('../../components/dashboardHtml.php');
+?>
 
 <div class="details">
   <div class="recentOrders">
     <div class="cardHeader">
       <h2>Usuarios</h2>
-
       <div class="search">
         <form method="post">
           <label>
@@ -17,16 +19,21 @@
     <?php
     require_once("../../includes/conexion.php");
 
-    if (isset($_POST['user'])) {
-      $var_consulta = "select * from cliente where idCliente =" . $_POST['user'];
+    if (isset($_POST['user']) && is_numeric($_POST['user'])) {
+      // Prepare the SQL statement
+      $stmt = $obj_conexion->prepare("SELECT * FROM cliente WHERE idCliente = ?");
+      $stmt->bind_param('i', $_POST['user']); // 'i' denotes integer type
     } else {
-      $var_consulta = "select * from cliente";
+      // Default query to fetch all clients
+      $stmt = $obj_conexion->prepare("SELECT * FROM cliente");
     }
 
-    $var_resultado = $obj_conexion->query($var_consulta);
+    $stmt->execute();
+    $var_resultado = $stmt->get_result();
 
     if ($var_resultado->num_rows > 0) {
       echo "<table>";
+      
       echo "<thead>";
       echo "<tr>";
       echo "<td>idCliente</td>";
@@ -68,4 +75,7 @@
   </div>
 </div>
 
-<?php require_once('../../components/finishedHtml.php'); ?>
+<?php
+require_once('../../components/finishedHtml.php');
+ob_end_flush();
+?>

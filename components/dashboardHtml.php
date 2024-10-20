@@ -43,7 +43,7 @@
                 </li>
 
                 <li>
-                    <a href="/Order_Management_System/pages/user">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>

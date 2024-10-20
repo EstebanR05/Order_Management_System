@@ -1,4 +1,7 @@
-<?php require_once('../../components/dashboardHtml.php'); ?>
+<?php
+ob_start();
+require_once('../../components/dashboardHtml.php');
+?>
 
 <div class="form">
     <?php
@@ -53,10 +56,13 @@
 
         $updateQuery = "UPDATE cliente SET nombre='$nombre', direccion='$direccion', email='$email', nombreDeUsuario='$nombreDeUsuario' WHERE idCliente='$idCliente'";
         $obj_conexion->query($updateQuery);
-        header("Location: usuarios.php");
+        header("Location: /Order_Management_System/pages/user/usuarios.php");
         exit;
     }
     ?>
 </div>
 
-<?php require_once('../../components/finishedHtml.php'); ?>
+<?php
+require_once('../../components/finishedHtml.php');
+ob_end_flush();
+?>
