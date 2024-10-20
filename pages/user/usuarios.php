@@ -6,11 +6,11 @@ require_once('../../components/dashboardHtml.php');
 <div class="details">
   <div class="recentOrders">
     <div class="cardHeader">
-      <h2>Usuarios</h2>
+      <h2>Users</h2>
       <div class="search">
         <form method="post">
           <label>
-            <input type="text" name="user" placeholder="Consultar por Id Cliente">
+            <input type="text" name="user" placeholder="search user by Id">
             <ion-icon name="search-outline"></ion-icon>
           </label>
         </form>
@@ -36,12 +36,12 @@ require_once('../../components/dashboardHtml.php');
       
       echo "<thead>";
       echo "<tr>";
-      echo "<td>idCliente</td>";
-      echo "<td>nombre</td>";
-      echo "<td>direccion</td>";
-      echo "<td>email</td>";
-      echo "<td>nombreDeUsuario</td>";
-      echo "<td>opciones</td>";
+      echo "<td>Id</td>";
+      echo "<td>Name</td>";
+      echo "<td>Address</td>";
+      echo "<td>Email</td>";
+      echo "<td>NickName</td>";
+      echo "<td>options</td>";
       echo "</tr>";
       echo "</thead>";
 
@@ -56,11 +56,11 @@ require_once('../../components/dashboardHtml.php');
         echo "<td>
         <form method='post' action='editarUser.php' style='display:inline;'>
             <input type='hidden' name='idCliente' value='" . $var_fila["idCliente"] . "' />
-            <input class='btn' type='submit' value='Editar' />
+            <input class='btn' type='submit' value='Edit' />
         </form>
         <form method='post' action='eliminarUser.php' style='display:inline;'>
             <input type='hidden' name='idCliente' value='" . $var_fila["idCliente"] . "' />
-            <input class='btn' type='submit' value='Eliminar' onclick=\"return confirm('¿Está seguro de que desea eliminar este registro?');\" />
+            <input class='btn' type='submit' value='Remove' onclick=\"return confirm('¿Está seguro de que desea eliminar este registro?');\" />
         </form>
       </td>";
         echo "</tr>";

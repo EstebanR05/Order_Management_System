@@ -19,11 +19,11 @@
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input name="user" type="text" placeholder="Usuario" required />
+            <input name="user" type="text" placeholder="Email" required />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input name="pass" type="password" placeholder="Contraseña" required />
+            <input name="pass" type="password" placeholder="Password" required />
           </div>
           <input type="submit" value="Login" class="btn solid" />
           <!--<p class="social-text">Or Sign in with social platforms</p>
@@ -46,44 +46,29 @@
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" name="nombre" placeholder="Ingresa el nombre" required />
+            <input type="text" name="nombre" placeholder="User name" required />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Ingresa el email" required />
+            <input type="email" name="email" placeholder="Email" required />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Ingresa el contrasena" required />
+            <input type="password" name="contrasena" placeholder="Password" required />
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" name="nombreDeUsuario" placeholder="Ingresa el nombreDeUsuario" required />
+            <input type="text" name="nombreDeUsuario" placeholder="NickName" required />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="text" name="direccion" placeholder="Ingresa la direccion" required />
+            <input type="text" name="direccion" placeholder="Address" required />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="number" name="codCiudad" placeholder="Ingresa el codCiudad" required />
+            <input type="number" name="codCiudad" placeholder="City code" required />
           </div>
           <input type="submit" class="btn" value="Sign up" />
-          <!-- <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div> -->
         </form>
       </div>
     </div>
