@@ -316,7 +316,7 @@ body {
 }
 
 .details table .btn:hover {
-    background: var(--dark-blue);
+    background: #1a1465
 }
 
 .details table {
@@ -339,8 +339,7 @@ body {
 }
 
 .details .recentOrders table tbody tr:hover {
-    background: var(--blue);
-    color: var(--white);
+    background: #fafafa;
 }
 
 .details .recentOrders table tr td {
