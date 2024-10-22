@@ -3,28 +3,23 @@
 require_once("../../includes/conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $Name = $_POST['Name'];
+    $lastName = $_POST['lastName'];
+    $Email = $_POST['email'];
+    $Password = $_POST['Password'];
+    $NickName = $_POST['NickName'];
+    $Address = $_POST['Address'];
+    $City_idCity = $_POST['City_idCity'];
 
-    // Obtener datos del formulario
-    $nombre = $_POST['nombre'];
-    $direccion = $_POST['direccion'];
-    $codCiudad = $_POST['codCiudad'];
-    $email = $_POST['email'];
-    $nombreDeUsuario = $_POST['nombreDeUsuario'];
-    $contrasena = $_POST['contrasena'];
+    $query = "INSERT INTO users 
+    (`idUser`, `Name`, `lastName`, `Email`, `Password`, `NickName`, `Address`, `City_idCity`, `Rols_idRol`) VALUES 
+    (null, '$Name', '$lastName', '$Email', '$Password', '$NickName', '$Address', $City_idCity, 2)";
 
-    // Crear la consulta SQL para insertar un nuevo cliente
-    $query = "INSERT INTO cliente 
-                                (idCliente, nombre, direccion, codCiudad, email, nombreDeUsuario, contrasena) VALUES 
-                                (null, '$nombre', '$direccion', $codCiudad, '$email', '$nombreDeUsuario', '$contrasena')";
-
-    // Ejecutar la consulta
-    if ($obj_conexion->query($query) === TRUE) {
-        echo "Usuario registrado con éxito";
-        header('Location: index.php');
-    } else {
+    if ($obj_conexion->query($query) === False) {
         echo "Error al registrar el usuario: " . $obj_conexion->error;
     }
 
-    // Cerrar la conexión
+    echo "Usuario registrado con éxito";
+    header('Location: index.php');
     $obj_conexion->close();
 }

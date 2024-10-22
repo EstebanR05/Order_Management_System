@@ -1,7 +1,7 @@
 <?php
 $cons_usuario = "root";
 $cons_contra = "";
-$cons_base_datos = "bd_jurado_a";
+$cons_base_datos = "ordercontrol";
 $cons_equipo = "localhost";
 
 $obj_conexion =

@@ -46,7 +46,11 @@
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" name="nombre" placeholder="User name" required />
+            <input type="text" name="Name" placeholder="Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="lastName" placeholder="LastName" required />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
@@ -54,19 +58,19 @@
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Password" required />
+            <input type="password" name="Password" placeholder="Password" required />
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" name="nombreDeUsuario" placeholder="NickName" required />
+            <input type="text" name="NickName" placeholder="NickName" required />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="text" name="direccion" placeholder="Address" required />
+            <input type="text" name="Address" placeholder="Address" required />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="number" name="codCiudad" placeholder="City code" required />
+            <input type="number" name="City_idCity" placeholder="City code" required />
           </div>
           <input type="submit" class="btn" value="Sign up" />
         </form>

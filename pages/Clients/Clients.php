@@ -6,11 +6,11 @@ require_once('../../components/dashboardHtml.php');
 <div class="details">
   <div class="recentOrders">
     <div class="cardHeader">
-      <h2>Users</h2>
+      <h2>Clients</h2>
       <div class="search">
         <form method="post">
           <label>
-            <input type="text" name="user" placeholder="search user by Id">
+            <input type="text" name="user" placeholder="search by Id">
             <ion-icon name="search-outline"></ion-icon>
           </label>
         </form>
@@ -20,12 +20,10 @@ require_once('../../components/dashboardHtml.php');
     require_once("../../includes/conexion.php");
 
     if (isset($_POST['user']) && is_numeric($_POST['user'])) {
-      // Prepare the SQL statement
-      $stmt = $obj_conexion->prepare("SELECT * FROM cliente WHERE idCliente = ?");
-      $stmt->bind_param('i', $_POST['user']); // 'i' denotes integer type
+      $stmt = $obj_conexion->prepare("select c2.Name as cityName, c.* from client c inner join city c2 ON c.City_idCity = c2.idCity WHERE idCliente = ?");
+      $stmt->bind_param('i', $_POST['user']);
     } else {
-      // Default query to fetch all clients
-      $stmt = $obj_conexion->prepare("SELECT * FROM cliente");
+      $stmt = $obj_conexion->prepare("select c2.Name as cityName, c.* from client c inner join city c2 ON c.City_idCity = c2.idCity");
     }
 
     $stmt->execute();
@@ -38,9 +36,9 @@ require_once('../../components/dashboardHtml.php');
       echo "<tr>";
       echo "<td>Id</td>";
       echo "<td>Name</td>";
-      echo "<td>Address</td>";
       echo "<td>Email</td>";
-      echo "<td>NickName</td>";
+      echo "<td>Address</td>";
+      echo "<td>City</td>";
       echo "<td>options</td>";
       echo "</tr>";
       echo "</thead>";
@@ -48,18 +46,18 @@ require_once('../../components/dashboardHtml.php');
       echo "<tbody>";
       while ($var_fila = $var_resultado->fetch_array()) {
         echo "<tr>";
-        echo "<td>" . $var_fila["idCliente"] . "</td>";
-        echo "<td>" . $var_fila["nombre"] . "</td>";
-        echo "<td>" . $var_fila["direccion"] . "</td>";
-        echo "<td>" . $var_fila["email"] . "</td>";
-        echo "<td>" . $var_fila["nombreDeUsuario"] . "</td>";
+        echo "<td>" . $var_fila["idClient"] . "</td>";
+        echo "<td>" . $var_fila["Name"] . "</td>";
+        echo "<td>" . $var_fila["Email"] . "</td>";
+        echo "<td>" . $var_fila["Address"] . "</td>";
+        echo "<td>" . $var_fila["cityName"] . "</td>";
         echo "<td>
-        <form method='post' action='editarUser.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idCliente"] . "' />
+        <form method='post' action='UpdateClient.php' style='display:inline;'>
+            <input type='hidden' name='idCliente' value='" . $var_fila["idClient"] . "' />
             <input class='btn' type='submit' value='Edit' />
         </form>
-        <form method='post' action='eliminarUser.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idCliente"] . "' />
+        <form method='post' action='RemoveClient.php' style='display:inline;'>
+            <input type='hidden' name='idCliente' value='" . $var_fila["idClient"] . "' />
             <input class='btn' type='submit' value='Remove' onclick=\"return confirm('¿Está seguro de que desea eliminar este registro?');\" />
         </form>
       </td>";

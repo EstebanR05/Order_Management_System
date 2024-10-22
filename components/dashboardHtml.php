@@ -34,20 +34,20 @@
                 </li>
 
                 <li>
-                    <a href="/Order_Management_System/pages/user/usuarios.php">
+                    <a href="/Order_Management_System/pages/Clients/Clients.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Users</span>
+                        <span class="title">Clients</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/Order_Management_System/pages/Employees/Employees.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Customers</span>
+                        <span class="title">Employees</span>
                     </a>
                 </li>
 
