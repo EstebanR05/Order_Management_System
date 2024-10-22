@@ -1,12 +1,12 @@
 <?php
 require_once("../../includes/conexion.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idCliente'])) {
-    $idCliente = $_POST['idCliente'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idClient'])) {
+    $idClient = $_POST['idClient'];
 
     // Elimina el cliente de la base de datos
-    $deleteQuery = "DELETE FROM cliente WHERE idCliente='$idCliente'";
+    $deleteQuery = "DELETE FROM client WHERE idClient=". $idClient;
     $obj_conexion->query($deleteQuery);
-    header("Location: usuarios.php"); // Redirigir después de eliminar
+    header("Location: Clients.php"); // Redirigir después de eliminar
 }
 ?>

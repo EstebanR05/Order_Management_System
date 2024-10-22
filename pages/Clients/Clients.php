@@ -20,7 +20,7 @@ require_once('../../components/dashboardHtml.php');
     require_once("../../includes/conexion.php");
 
     if (isset($_POST['user']) && is_numeric($_POST['user'])) {
-      $stmt = $obj_conexion->prepare("select c2.Name as cityName, c.* from client c inner join city c2 ON c.City_idCity = c2.idCity WHERE idCliente = ?");
+      $stmt = $obj_conexion->prepare("select c2.Name as cityName, c.* from client c inner join city c2 ON c.City_idCity = c2.idCity where c.idClient = ?");
       $stmt->bind_param('i', $_POST['user']);
     } else {
       $stmt = $obj_conexion->prepare("select c2.Name as cityName, c.* from client c inner join city c2 ON c.City_idCity = c2.idCity");
@@ -53,11 +53,11 @@ require_once('../../components/dashboardHtml.php');
         echo "<td>" . $var_fila["cityName"] . "</td>";
         echo "<td>
         <form method='post' action='UpdateClient.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idClient"] . "' />
+            <input type='hidden' name='idClient' value='" . $var_fila["idClient"] . "' />
             <input class='btn' type='submit' value='Edit' />
         </form>
         <form method='post' action='RemoveClient.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idClient"] . "' />
+            <input type='hidden' name='idClient' value='" . $var_fila["idClient"] . "' />
             <input class='btn' type='submit' value='Remove' onclick=\"return confirm('¿Está seguro de que desea eliminar este registro?');\" />
         </form>
       </td>";
