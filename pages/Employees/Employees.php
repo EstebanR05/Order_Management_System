@@ -63,12 +63,12 @@ require_once('../../components/dashboardHtml.php');
         echo "<td>" . $var_fila["rolName"] . "</td>";
 
         echo "<td>
-        <form method='post' action='editarUser.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idUser"] . "' />
+        <form method='post' action='UpdateEmployee.php' style='display:inline;'>
+            <input type='hidden' name='idUser' value='" . $var_fila["idUser"] . "' />
             <input class='btn' type='submit' value='Edit' />
         </form>
-        <form method='post' action='eliminarUser.php' style='display:inline;'>
-            <input type='hidden' name='idCliente' value='" . $var_fila["idUser"] . "' />
+        <form method='post' action='RemoveEmployee.php' style='display:inline;'>
+            <input type='hidden' name='idUser' value='" . $var_fila["idUser"] . "' />
             <input class='btn' type='submit' value='Remove' onclick=\"return confirm('¿Está seguro de que desea eliminar este registro?');\" />
         </form>
       </td>";
