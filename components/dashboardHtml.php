@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <a href="/Order_Management_System/pages/Employees/Employees.php">
+                    <a href="/Order_Management_System/pages/Orders/Orders.php">
                         <span class="icon">
                             <ion-icon name="albums-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                 </li>
 
                 <li>
-                    <a href="/Order_Management_System/pages/Employees/Employees.php">
+                    <a href="/Order_Management_System/pages/Products/Products.php">
                         <span class="icon">
                             <ion-icon name="storefront-outline"></ion-icon>
                         </span>
@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/Order_Management_System/pages/Settings/Settings.php">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/Order_Management_System/pages/Profile/Profile.php">
                         <span class="icon">
                             <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
